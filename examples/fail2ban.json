@@ -1,0 +1,6 @@
+{
+  "fail2ban::email": "root@localhost",
+  "fail2ban::ignoreip": [
+        "127.0.0.1/8"
+  ]
+}

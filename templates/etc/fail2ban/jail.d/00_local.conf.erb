@@ -1,0 +1,19 @@
+# 
+# This file is managed by Puppet
+# <%= file %>
+#
+
+[DEFAULT]
+
+# "ignoreip" can be an IP address, a CIDR mask or a DNS host
+<% if ignoreip.length > 1 -%>
+ignoreip = <%= ignoreip.join(" ") %>
+<% else -%>
+ignoreip = <%= ignoreip %>
+<% end -%>
+bantime  = 1800	; number of seconds
+maxretry = 3
+#
+# Destination email address used solely for the interpolations in
+# jail.{conf,local} configuration files.
+destemail = <%= email %>
